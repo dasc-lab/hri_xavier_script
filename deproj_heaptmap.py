@@ -264,7 +264,7 @@ class MinimalSubscriber(Node):
             
             # Break the loop if 'q' is pressed
             if cv2.waitKey(1) & 0xFF == ord('q'):
-                self.plot_heatmap()
+                #self.plot_heatmap()
                 rclpy.shutdown()
             if cv2.waitKey(1) & 0xFF == ord('h'):
                 self.plot_heatmap()
