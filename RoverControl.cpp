@@ -282,10 +282,10 @@ float RoverControl::wrap_angle(float angle){
  bool straight_target_reached()
     { 
 		Vector3f  error = (pos_target - rover_pose).zero_if_nan();
-		if ((std::fabs(error(0)) < 0.02) && (std::fabs(error(1))  < 0.02)) {
+		if ((std::fabs(error(0)) < 0.05) && (std::fabs(error(1))  < 0.05)) {
 			state_ = INITIAL_TURN;
 		}
-        return ((std::fabs(error(0)) < 0.02) && (std::fabs(error(1))  < 0.02));
+        return ((std::fabs(error(0)) < 0.05) && (std::fabs(error(1))  < 0.05));
     }
 bool turn_target_reached(float yaw_error) {
 	if(fabs(yaw_error) < 0.05) {
@@ -302,7 +302,7 @@ Vector2f RoverControl::turn_controller(float  yaw_error) {
 	lin_ang_cmd(1) = angular_vel_cmd;
 	return lin_ang_cmd
 }
-Vector2f RoverControl::straight_controller(float yaw_error, float desired_linear_vel) {
+Vector2f RoverControl::straight_controller(float yaw_error, float desired_linear_vel, float x_vel) {
 	Vector2f lin_ang_cmd;
 	
 	float linear_vel_cmd = desired_linear_vel + kv * ( desired_linear_vel - x_vel );
@@ -343,17 +343,18 @@ Vector2f RoverControl::rover_controller(){
 
 	if (1){//( ex.norm() > _rover_wheel_base/2 ){
 		float desired_linear_vel = kx * ex.norm() * cosf(yaw_error);
+		
 		// linear_vel_cmd = desired_linear_vel + kv * ( desired_linear_vel - x_vel );
 		// angular_vel_cmd = komega * yaw_error;
 	}
-	if (!turn_target_reached(yaw_error)&& state_ = INITIAL_TURN) {
+	if (std::abs(yaw_error)>0.1) {//(!turn_target_reached(yaw_error)&& state_ = INITIAL_TURN) {
 		// turn
 		
 		return turn_controller(yaw_error);
-	} else if (state_ = DRIVE){
+	} else {
 		// straight
 
-		return straight_controller(yaw_error,desired_linear_vel);
+		return straight_controller(yaw_error,desired_linear_vel, x_vel);
 	}
 
 	// Vector2f lin_ang_cmd;
