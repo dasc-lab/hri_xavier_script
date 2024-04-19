@@ -11,7 +11,8 @@ The system comprises
 - an Intel RealSense Camera D435  that will be strapped onto the drone. During the testing phase, the camera is strapped onto a beam that faces the ground.
 - a Microsoft Hololens that the user will interact with
 - a ground rover in Differential Drive mode
-- 
+  - A Raspberry Pi as the processing unit for the rover
+  - [Orange Cube](https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange.html)
 - [Vicon Coordinate System](https://www.vicon.com/) that provides real time information about the pose of the robot. Note that a minimum of three 'Vicon Pearls would be needed'.
 
 
