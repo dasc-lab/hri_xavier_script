@@ -24,6 +24,6 @@ The system comprises
   
 **On Rover**:
 - [PX4-Autopilot-Quad](https://github.com/dev10110/PX4-Autopilot-Quad/tree/rover)
-  - **Clone 'Rover' brach**: git clone -b 
+  - **Clone 'Rover' brach**: `git clone -b https://github.com/dev10110/PX4-Autopilot-Quad.git`
 
 ## Socket Communication
