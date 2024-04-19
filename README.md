@@ -19,6 +19,7 @@ On Xavier:
 - [Robot Operating System 2 (ROS2)](https://docs.ros.org/en/foxy/index.html)
 - OpenCV2 and Numpy
 - [Realsense libraries](https://github.com/IntelRealSense/librealsense)
+  
 On rover:
 - PX4-Autopilot-Quad
 
