@@ -41,7 +41,8 @@ The system comprises
 ### Xavier
 * Set up Vicon Bridge
   * Open up a terminal window and in your project `/ros2_ws/src` folder,  enter `source install/setup.bash` Note: **It is recommended that you put this line in .bashrc file**
-  * Run Vicon bridge with the command `ros2 launch vicon_bridge all_segments.yaml`
+  * Navigate to vicon_bridge_ros2
+  * Run Vicon bridge with the command `ros2 launch vicon_bridge all_segments.launch.py`
   * (Optional) In a new terminal, run the command `ros2 topic list` to see the current available topics
   * In a new terminal, run the command `ros2 topic echo /your_topic_name' to visualize the broadcast information
 ###
