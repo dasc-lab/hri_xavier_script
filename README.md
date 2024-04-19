@@ -21,9 +21,15 @@ The system comprises
 - [Robot Operating System 2 (ROS2)](https://docs.ros.org/en/foxy/index.html)
 - OpenCV2 and Numpy
 - [Realsense libraries](https://github.com/IntelRealSense/librealsense)
-  
+- [Vicon Bridge](https://github.com/dasc-lab/ros2-vicon-bridge) `git clone https://github.com/dasc-lab/ros2-vicon-bridge.git`
+
 **On Rover**:
-- [PX4-Autopilot-Quad](https://github.com/dev10110/PX4-Autopilot-Quad/tree/rover)
+- [PX4-Autopilot-Quad](https://github.com/dev10110/PX4-Autopilot-Quad/tree/rover) flashed onto Orange cube
   - **Clone 'Rover' brach**: `git clone -b rover https://github.com/dev10110/PX4-Autopilot-Quad.git`
+  - in folder run the following command:
+     - `make cubepilot_cubeorange_dasc`
+- [QGC software](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
+- 
+
 
 ## Socket Communication
