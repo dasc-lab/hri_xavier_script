@@ -55,5 +55,13 @@ The system comprises
   * `docker compose build` (first time)
   * `docker compose up -d`
   * `docker exec -it rover_px4_ros2_ bash` (use tab-complete)
-  * `ros2 launch
+  * `ros2 launch all_launch px4.launch.py`
+  * launch QGC software
+* On local ground station computer
+  * Navigate to `rover_groundstation_ros2_jumpstart`
+  * `docker compose build` (first time)
+  * `docker compose up -d`
+  * `ros2 launch ground_station gs.launch.py` (tab complete)
+  * If an error occurs, open up a new window in the terminal and type in command  `xhost +` and try the prior steps
+
 ## Socket Communication
