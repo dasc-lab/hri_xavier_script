@@ -10,6 +10,7 @@ The system comprises
 - a Jetson Xavier as the processing unit of the drone
 - an Intel RealSense Camera D435  that will be strapped onto the drone. During the testing phase, the camera is strapped onto a beam that faces the ground.
 - a Microsoft Hololens that the user will interact with
+- a ground station computer to monitor and interact with the rover
 - a ground rover in Differential Drive mode
   - A Raspberry Pi as the processing unit for the rover
   - [Orange Cube](https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange.html)
@@ -24,11 +25,12 @@ The system comprises
 - [Vicon Bridge](https://github.com/dasc-lab/ros2-vicon-bridge) `git clone https://github.com/dasc-lab/ros2-vicon-bridge.git`
 
 **On Rover**:
+- Install docker on Raspberry PI 
 - [PX4-Autopilot-Quad](https://github.com/dev10110/PX4-Autopilot-Quad/tree/rover) flashed onto Orange cube
   - **Clone 'Rover' brach**: `git clone -b rover https://github.com/dev10110/PX4-Autopilot-Quad.git`
   - in folder run the following command:
      - `make cubepilot_cubeorange_dasc`
-- [QGC software](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
+- [QGC software](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html) installed on ground station computer
 - [ground station](https://github.com/dasc-lab/rover_groundstation_ros2_jumpstart) `git clone https://github.com/dasc-lab/rover_groundstation_ros2_jumpstart.git`
 
 ## System and Terminal Setup
@@ -45,5 +47,13 @@ The system comprises
   * Run Vicon bridge with the command `ros2 launch vicon_bridge all_segments.launch.py`
   * (Optional) In a new terminal, run the command `ros2 topic list` to see the current available topics
   * In a new terminal, run the command `ros2 topic echo /your_topic_name' to visualize the broadcast information
-###
+  
+### Rover
+* Set up Raspberry PI (on ground station computer)
+  * SSH into Raspberry PI onboard the rover (may take minutes for Raspberry Pi to boot up)
+  * `cd rover_px4_ros2_jumpstart`
+  * `docker compose build` (first time)
+  * `docker compose up -d`
+  * `docker exec -it rover_px4_ros2_ bash` (use tab-complete)
+  * 
 ## Socket Communication
