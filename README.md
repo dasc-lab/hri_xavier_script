@@ -31,9 +31,18 @@ The system comprises
 - [QGC software](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
 - [ground station](https://github.com/dasc-lab/rover_groundstation_ros2_jumpstart) `git clone https://github.com/dasc-lab/rover_groundstation_ros2_jumpstart.git`
 
-## Terminal Setup
+## System and Terminal Setup
+### Vicon
+* Initializes Vicon coordinate frame and start tracking your robot.
+  * At least three Vicon dots will need to be placed on the robot for the tracker to initialize the robot in the system.
+  * Initialize the robot in the system by selecting the three Vicon dots attached to the robot in the 'Object' tab of the interface and enter a name for it.
+  * Save the object as **public**
+  * Click 'Track' to start broadcasting the pose and coordinate of the robot through ROS2
 ### Xavier
-**Note: It is recommended that you enter the following lines to .bashrc file.**
-- 
-
+* Set up Vicon Bridge
+  * Open up a terminal window and in your project `/ros2_ws/src` folder,  enter `source install/setup.bash` Note: **It is recommended that you put this line in .bashrc file**
+  * Run Vicon bridge with the command `ros2 launch vicon_bridge all_segments.yaml`
+  * (Optional) In a new terminal, run the command `ros2 topic list` to see the current available topics
+  * In a new terminal, run the command `ros2 topic echo /your_topic_name' to visualize the broadcast information
+###
 ## Socket Communication
