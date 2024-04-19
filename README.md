@@ -65,3 +65,4 @@ The system comprises
   * If an error occurs, open up a new window in the terminal and type in command  `xhost +` and try the prior steps
 
 ## Socket Communication
+In python script `xavier_node_multithreading_dashed.py`, change the variable **self.HOST**to the IP address of your Xaiver.
