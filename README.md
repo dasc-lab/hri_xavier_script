@@ -55,5 +55,5 @@ The system comprises
   * `docker compose build` (first time)
   * `docker compose up -d`
   * `docker exec -it rover_px4_ros2_ bash` (use tab-complete)
-  * 
+  * `ros2 launch
 ## Socket Communication
