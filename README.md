@@ -13,7 +13,7 @@ The system comprises
 - a ground rover in Differential Drive mode
   - A Raspberry Pi as the processing unit for the rover
   - [Orange Cube](https://docs.px4.io/main/en/flight_controller/cubepilot_cube_orange.html)
-- [Vicon Coordinate System](https://www.vicon.com/) that provides real time information about the pose of the robot. Note that a minimum of three 'Vicon Pearls would be needed'.
+- [Vicon Coordinate System](https://www.vicon.com/) that provides real time information about the pose of the robot. Note that a minimum of three 'Vicon Pearls' would be needed.
 
 
 ## Software Prerequisites
@@ -29,7 +29,7 @@ The system comprises
   - in folder run the following command:
      - `make cubepilot_cubeorange_dasc`
 - [QGC software](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
-- 
+- [ground station](https://github.com/dasc-lab/rover_groundstation_ros2_jumpstart) `git clone https://github.com/dasc-lab/rover_groundstation_ros2_jumpstart.git`
 
 
 ## Socket Communication
