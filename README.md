@@ -10,17 +10,18 @@ The system comprises
 - a Jetson Xavier as the processing unit of the drone
 - an Intel RealSense Camera D435  that will be strapped onto the drone. During the testing phase, the camera is strapped onto a beam that faces the ground.
 - a Microsoft Hololens that the user will interact with
-- a rover that will move according to the user's commands
+- a ground rover in Differential Drive mode
+- 
 - [Vicon Coordinate System](https://www.vicon.com/) that provides real time information about the pose of the robot. Note that a minimum of three 'Vicon Pearls would be needed'.
 
 
 ## Software Prerequisites
-On Xavier:
+**On Xavier**:
 - [Robot Operating System 2 (ROS2)](https://docs.ros.org/en/foxy/index.html)
 - OpenCV2 and Numpy
 - [Realsense libraries](https://github.com/IntelRealSense/librealsense)
   
-On rover:
+**On rover**:
 - PX4-Autopilot-Quad
 
 ## Socket Communication
