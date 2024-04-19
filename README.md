@@ -47,7 +47,9 @@ The system comprises
   * Run Vicon bridge with the command `ros2 launch vicon_bridge all_segments.launch.py`
   * (Optional) In a new terminal, run the command `ros2 topic list` to see the current available topics
   * In a new terminal, run the command `ros2 topic echo /your_topic_name' to visualize the broadcast information
-  
+* Set up PX4_msgs
+   * Download px4_msgs_main and move it to `~ros2_ws/src`
+   * `colcon_build --symlink-install`, for more info, see [colcon_build](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html)
 ### Rover
 * Set up Raspberry PI (on ground station computer)
   * SSH into Raspberry PI onboard the rover (may take minutes for Raspberry Pi to boot up)
