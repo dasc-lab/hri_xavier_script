@@ -31,5 +31,9 @@ The system comprises
 - [QGC software](https://docs.qgroundcontrol.com/master/en/qgc-user-guide/getting_started/download_and_install.html)
 - [ground station](https://github.com/dasc-lab/rover_groundstation_ros2_jumpstart) `git clone https://github.com/dasc-lab/rover_groundstation_ros2_jumpstart.git`
 
+## Terminal Setup
+### Xavier
+**Note: It is recommended that you enter the following lines to .bashrc file.**
+- 
 
 ## Socket Communication
