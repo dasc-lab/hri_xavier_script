@@ -8,13 +8,15 @@ The hologram displays the past and predicted optimal trajectories as blue dashed
 ## Hardware Components/Prerequisites
 The system comprises 
 - a Jetson Xavier as the processing unit of the drone
-- an Intel RealSense Camera that will be strapped onto the drone
+- an Intel RealSense Camera D435  that will be strapped onto the drone
 - a Microsoft Hololens that the user will interact with
 - a rover that will move according to the user's commands
 - [Vicon Coordinate System](https://www.vicon.com/) that provides real time information about the pose of the robot. Note that a minimum of three 'Vicon Pearls would be needed'.
 During the testing phase, the camera is strapped onto a beam that faces the ground.
 
 ## Software Prerequisites
-[Robot Operating System 2 (ROS2)](https://docs.ros.org/en/foxy/index.html) for transmitting coordinate data
+- [Robot Operating System 2 (ROS2)](https://docs.ros.org/en/foxy/index.html)
+- OpenCV2 and Numpy
+- [Realsense libraries](https://github.com/IntelRealSense/librealsense)
 
 ## Socket Communication
