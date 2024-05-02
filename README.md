@@ -68,4 +68,4 @@ The system comprises
 ## Camera Calibration
 It is recommended that you calibrate the camera for better coordinate transformation results. We will be utilizing apriltags and `cv2.solvePnP()` to calibrate the camera extrinsic matrix. We printed out 6 apriltags of the same family and laid them on known coordinates of the ground. Using the apriltag library provided by python, we can obtain the pixel coordinates of the apriltag points and find the correspondence. `cv2.solvePnP()` would output the extrinsic matrix
 ## Socket Communication
-In python script `xavier_node_multithreading_dashed.py`, change the variable **self.HOST**to the IP address of your Xaiver.
+In python script `xavier_node_multithreading_dashed.py`, change the variable **self.HOST** to the IP address of your Xaiver.
